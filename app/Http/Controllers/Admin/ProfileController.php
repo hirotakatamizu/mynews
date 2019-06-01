@@ -19,6 +19,14 @@ class ProfileController extends Controller
   {
       $this->validate($request, Profiles::$rules);
 
+      $profiles = new Profiles;
+      $form = $request->all();
+
+      unset($form['_token']);
+
+      $profiles->fill($form);
+      $profiles->save();
+
       return redirect('admin/profile/create');
   }
 
