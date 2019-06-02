@@ -27,7 +27,7 @@ class ProfileController extends Controller
       $profiles->fill($form);
       $profiles->save();
 
-      return redirect('admin/profile/create');
+      return redirect('admin/profile/');
   }
 
   public function index(Request $request)
@@ -62,7 +62,7 @@ class ProfileController extends Controller
 
 
     unset($profiles_form['_token']);
-    unset($profiles_form['remove']);
+    
     // 該当するデータを上書きして保存する
     $profiles->fill($profiles_form)->save();
 
