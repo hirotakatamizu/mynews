@@ -7,6 +7,18 @@ body {
   height: 82px;
 }
 
+.padding {
+  padding: 0.5em;
+}
+
+.padding .nav-news {
+  color: #3490dc !important;
+}
+
+.color {
+  color: #3490dc !important;
+}
+
 .headline .caption {
   position: relative;
   width: 350px;
@@ -31,15 +43,6 @@ body {
 
 .headline .caption .body {
   font-size: 0.8em;
-}
-
-.padding {
-  padding: 0.5em;
-  color: #3490dc;
-}
-
-.color {
-  color: #3490dc;
 }
 
 .posts .post .date {

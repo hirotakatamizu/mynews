@@ -65,6 +65,7 @@
                       </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
+                        <div class="color">
                         <ul class="navbar-nav mr-auto">
                           {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                           @guest
@@ -90,7 +91,7 @@
                               </li>
                               @endguest
                         </ul>
-
+                      </div>
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
                         </ul>
