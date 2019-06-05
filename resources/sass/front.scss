@@ -34,7 +34,13 @@ body {
     }
   }
 }
-
+.padding{
+  padding:0.5em;
+  color: #3490dc;
+}
+.color{
+  color: #3490dc;
+}
 .posts {
   .post {
     .date {
@@ -52,6 +58,16 @@ body {
       img {
     width: 250px;
       }
+    }
+    .profile{
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .introduction{
+      font-size: 0.8em;
+    }
+    .float-left{
+      float:left;
     }
   }
 }

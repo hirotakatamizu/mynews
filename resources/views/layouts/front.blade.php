@@ -31,19 +31,44 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                  <div class="padding">
+                    <a class="navbar-news" href="{{ url('/') }}">
+                        mynews
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+                  </div>
+                  <div class="padding">
+                    <a class="navbar-news" href="{{ url('/profile') }}">
+                        myprofile
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+                  <div class="padding">
+                        <a class="navbar-news" href="{{ url('/admin/news') }}">
+                            mynews編集
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                      </div>
+                      <div class="padding">
+                        <a class="navbar-news" href="{{ url('/admin/profile') }}">
+                            マイプロフィール編集
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                      </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
                           {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                           @guest
-                              <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                              <li><a class="nav-news" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                           {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                           @else
                               <li class="nav-item dropdown">

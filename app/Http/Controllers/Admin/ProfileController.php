@@ -8,6 +8,10 @@ use App\Http\Controllers\Controller;
 // 以下を追記することでNews Modelが扱えるようになる
 use App\Profiles;
 
+use App\Profilehistory;
+
+use Carbon\Carbon;
+
 class ProfileController extends Controller
 {
   public function add()
@@ -62,13 +66,17 @@ class ProfileController extends Controller
 
 
     unset($profiles_form['_token']);
-    
+
     // 該当するデータを上書きして保存する
     $profiles->fill($profiles_form)->save();
 
-    return redirect('admin/profile/');
-  }
+    $profilehistory = new Profilehistory;
+    $profilehistory->profiles_id = $profiles->id;
+    $profilehistory->edited_at = Carbon::now();
+    $profilehistory->save();
 
+  return redirect('admin/profile/');  
+}
   public function delete(Request $request)
 {
     // 該当するNews Modelを取得
